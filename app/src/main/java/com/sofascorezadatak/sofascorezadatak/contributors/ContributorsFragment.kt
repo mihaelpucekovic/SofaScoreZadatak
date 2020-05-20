@@ -64,7 +64,7 @@ class ContributorsFragment : Fragment() {
 
         handler.postDelayed(object : Runnable {
             override fun run() {
-                if (isAdded && isVisible && userVisibleHint) {
+                if (isVisible) {
                     contributorsViewModel!!.getRepositoryContributors(repository.user.login, repository.name)
 
                     handler.postDelayed(this, 15000)

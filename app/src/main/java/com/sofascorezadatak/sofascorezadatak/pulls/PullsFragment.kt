@@ -64,7 +64,7 @@ class PullsFragment : Fragment() {
 
         handler.postDelayed(object : Runnable {
             override fun run() {
-                if (isAdded && isVisible && userVisibleHint) {
+                if (isVisible) {
                     pullsViewModel!!.getRepositoryPulls(repository.user.login, repository.name)
 
                     handler.postDelayed(this, 15000)

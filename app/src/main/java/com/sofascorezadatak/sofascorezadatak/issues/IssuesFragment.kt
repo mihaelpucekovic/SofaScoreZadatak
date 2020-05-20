@@ -64,7 +64,7 @@ class IssuesFragment : Fragment() {
 
         handler.postDelayed(object : Runnable {
             override fun run() {
-                if (isAdded && isVisible && userVisibleHint) {
+                if (isVisible) {
                     issuesViewModel!!.getRepositoryIssues(repository.user.login, repository.name)
 
                     handler.postDelayed(this, 15000)
